@@ -114,7 +114,7 @@ class LinkedList {
         // if current node is the original head
         if (currentNode === this.head) {
           // assign the original "next" as the new head
-          this.head = currentNode.next;
+          this.head = this.head.next;
         } else {
           // assign the original "next" as the "next" of the original "prev"
           currentNode.prev.next = currentNode.next;
@@ -123,7 +123,7 @@ class LinkedList {
         // if the current node is the original tail
         if (currentNode === this.tail) {
           // assign the original "prev" as the new tail
-          this.tail = currentNode.prev;
+          this.tail = this.tail.prev;
         } else {
           // assign the original "prev" as the prev of the original "next"
           currentNode.next.prev = currentNode.prev;
